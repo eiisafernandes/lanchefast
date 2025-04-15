@@ -1,55 +1,51 @@
 <div class="container mt-5">
     <div class="row justify-content-center">
         <div class="col-md-8">
-            <!-- Card com a visualização do cliente -->
-            <div class="card shadow-lg border-light rounded">
-                <div class="card-header text-center bg-primary text-white">
-                    <h4>Detalhes do Cliente</h4>
+            <!-- Card com sombra elegante -->
+            <div class="card border-0 rounded-4 shadow-lg"> <!-- sombra adicionada -->
+                <div class="card-header bg-gradient bg-primary text-white text-center py-3 rounded-top-4">
+                    <h4 class="mb-0">Informações do Cliente</h4>
                 </div>
-                <div class="card-body">
-                    <div class="row mb-4">
+                <div class="card-body px-4 py-4">
+                    <div class="row mb-3">
                         <div class="col-md-6">
-                            <h5 class="text-muted">Nome:</h5>
-                            <p class="font-weight-bold">{{ $cliente->nome }}</p>
+                            <label class="text-muted">Nome:</label>
+                            <div class="fw-semibold fs-5">{{ $cliente->nome }}</div>
                         </div>
                         <div class="col-md-6">
-                            <h5 class="text-muted">E-mail:</h5>
-                            <p class="font-weight-bold">{{ $cliente->email }}</p>
-                        </div>
-                    </div>
-
-                    <div class="row mb-4">
-                        <div class="col-md-6">
-                            <h5 class="text-muted">Telefone:</h5>
-                            <p class="font-weight-bold">{{ $cliente->telefone }}</p>
-                        </div>
-                        <div class="col-md-6">
-                            <h5 class="text-muted">CPF:</h5>
-                            <p class="font-weight-bold">{{ $cliente->cpf }}</p>
+                            <label class="text-muted">E-mail:</label>
+                            <div class="fw-semibold fs-5">{{ $cliente->email }}</div>
                         </div>
                     </div>
 
-                    <div class="row mb-4">
+                    <div class="row mb-3">
+                        <div class="col-md-6">
+                            <label class="text-muted">Telefone:</label>
+                            <div class="fw-semibold fs-5">{{ $cliente->telefone }}</div>
+                        </div>
+                        <div class="col-md-6">
+                            <label class="text-muted">CPF:</label>
+                            <div class="fw-semibold fs-5">{{ $cliente->cpf }}</div>
+                        </div>
+                    </div>
+
+                    <div class="row mb-3">
                         <div class="col-md-12">
-                            <h5 class="text-muted">Endereço:</h5>
-                            <p class="font-weight-bold">{{ $cliente->endereco }}</p>
+                            <label class="text-muted">Endereço:</label>
+                            <div class="fw-semibold fs-5">{{ $cliente->endereco }}</div>
                         </div>
                     </div>
 
                     <div class="row mb-4">
                         <div class="col-md-6">
-                            <h5 class="text-muted">Senha:</h5>
-                            <p class="font-weight-bold">********</p> <!-- Não exibe a senha real -->
-                        </div>
-                        <div class="col-md-6">
-                            <h5 class="text-muted">Data de Cadastro:</h5>
-                            <p class="font-weight-bold">{{ $cliente->created_at->format('d/m/Y H:i') }}</p>
+                            <label class="text-muted">Senha:</label>
+                            <div class="fw-semibold fs-5">********</div> <!-- Senha oculta -->
                         </div>
                     </div>
 
                     <!-- Botão de Voltar -->
-                    <div class="d-flex justify-content-center">
-                        <a href="{{ route('clientes.index') }}" class="btn btn-secondary rounded-pill shadow-sm">Voltar</a>
+                    <div class="text-center">
+                        <a href="{{ route('clientes.index') }}" class="btn btn-outline-primary rounded-pill px-4">Voltar</a>
                     </div>
                 </div>
             </div>
